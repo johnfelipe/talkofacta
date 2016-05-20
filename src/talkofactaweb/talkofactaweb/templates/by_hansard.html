@@ -14,26 +14,27 @@
 {% block content %}
 <div id="by_hansard">
     <div class="container">
-        <div class="row"><div class="col-xs-12"><h2>Word usage by hansard<span id='lblHansardName' style="font-weight: bold"></span></h2></div></div>
+        <div class="row"><div class="col-xs-12"><h2>Uso de Palabras por Acta<span id='lblHansardName' style="font-weight: bold"></span></h2></div></div>
         <div class="row">
             <div class="col-xs-12">
                 <div class="form-group">
-                  <label for="slHansard">Choose a hansard:</label>
+                  <label for="slHansard">Seleccione Acta:</label>
                   <select class="form-control" id="slHansard">
                     {% for c in hansards %}
                         <option>{{c}}</option>
                     {% endfor %}
                   </select>
-                  <label title="Leave only those words that no other hansard has significantly often"><input type="checkbox" id="chkUnique"/>&nbsp;Unique</label>
+                  <label title="Leave only those words that no other hansard has significantly often"><input type="checkbox" id="chkUnique"/>&nbsp;Unicamente</label>
                 </div>
             </div>
         </div>
         <div class="row">
             <div class="col-xs-12 visualization-container" id="visualizationContainer">
-                <p id="hideOnClick">Choose a hansard...</p>
+                <p id="hideOnClick">Seleccione Acta...</p>
             </div>
         </div>
     </div>
+
 
     <script type="text/javascript">
         function WordcloudPage() {
